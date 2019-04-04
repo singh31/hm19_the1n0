@@ -7,16 +7,15 @@ public class homePagePost {
     public String location;
     //public String Name;
 
-    public homePagePost()
-    {
+    // useless constructor
+    public homePagePost() {}
 
-    }
     public homePagePost(String bType, long contact, String location, int quantity) {
         this.bType = bType;
         this.contact = contact;
         this.quantity = quantity;
         this.location = location;
-      //  Name = name;
+        //  Name = name;
     }
 
     public String getbType() {
@@ -54,7 +53,6 @@ public class homePagePost {
     /*public String getName() {
         return Name;
     }
-
     public void setName(String name) {
         Name = name;
     }*/

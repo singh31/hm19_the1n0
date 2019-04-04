@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_log_in"
+    tools:context=".requestPage">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:height="40dp"
+        android:text="@string/make_a_request"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/register_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_gravity="center"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="@string/your_location"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Requestlocation"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:ems="10"
+                android:hint="@string/location"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="#bbffffff"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_gravity="center"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textquantity"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/units_required_n_1_unit_350ml"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/BloodQuantity"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:hint="@string/quantity_in_l"
+                android:textColor="#fff"
+                android:inputType="textPersonName"
+                android:backgroundTint="#fff"
+                android:textAlignment="center"
+                android:textColorHint="#bbffffff"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_gravity="center"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:text="@string/blood_type"
+                tools:ignore="InefficientWeight" />
+
+            <Spinner
+                android:id="@+id/bloodGrpReq"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textColorHint="#bbffffff"
+                android:autofillHints="Blood Group"
+                android:backgroundTint="#00ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:background="#fff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_gravity="center"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/RequestmobileNo"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/phone_number_hint"
+                android:textColor="#fff"
+                android:inputType="textPersonName"
+                android:backgroundTint="#fff"
+                android:textAlignment="center"
+                android:textColorHint="#bbffffff"
+                tools:ignore="InefficientWeight"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/makeReq"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/make_a_request" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

@@ -23,15 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
-public class req extends AppCompatActivity implements View.OnClickListener{
+public class requestPage extends AppCompatActivity implements View.OnClickListener{
 
     private EditText location;
     private EditText phNo;
     private String bloodGrp;
     private EditText quantity;
     private Button makeReq;
-
-
 
     private ProgressDialog progressDialog;
 
@@ -41,13 +39,13 @@ public class req extends AppCompatActivity implements View.OnClickListener{
 
         if (location.getText().toString().trim().isEmpty() || quantity.getText().toString().trim().isEmpty() || phNo.getText().toString().trim().isEmpty()) {
 
-            Toast.makeText(req.this, "Enter all the details !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requestPage.this, "Enter all the details !", Toast.LENGTH_SHORT).show();
             return false;
 
         }
         else if (phNo.getText().toString().trim().length() != 10) {
 
-            Toast.makeText(req.this, "Invalid mobile number !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requestPage.this, "Invalid mobile number !", Toast.LENGTH_SHORT).show();
             return false;
 
         }
@@ -58,7 +56,7 @@ public class req extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.make_a_request);
+        setContentView(R.layout.activity_request_page);
 
 
         location = findViewById(R.id.Requestlocation);
@@ -72,7 +70,7 @@ public class req extends AppCompatActivity implements View.OnClickListener{
 
         progressDialog = new ProgressDialog(this);
 
-        Spinner bloodGrpSpinner = (Spinner) findViewById(R.id.bloodGrpReq);
+        Spinner bloodGrpSpinner = findViewById(R.id.bloodGrpReq);
 
         ArrayAdapter<CharSequence> bloodGrpAdapter = ArrayAdapter.createFromResource(this, R.array.bloodGrp_Array, android.R.layout.simple_spinner_item);
 
@@ -86,12 +84,12 @@ public class req extends AppCompatActivity implements View.OnClickListener{
                 if (pos == 0)
                     ((TextView) parent.getChildAt(0)).setTextColor(Color.GRAY);
 
-                bloodGrp = (String) parent.getItemAtPosition(pos).toString();
+                bloodGrp = parent.getItemAtPosition(pos).toString();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(req.this, "Choose your Blood Grp !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requestPage.this, "Choose your Blood Grp !", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -134,15 +132,15 @@ public class req extends AppCompatActivity implements View.OnClickListener{
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(req.this, "Request Successfull!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requestPage.this, "Request Successfull!", Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
 
                     finish();
-                    Intent intent = new Intent(req.this, homePage.class);
+                    Intent intent = new Intent(requestPage.this, homePage.class);
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(req.this, "Failed to Request, Please try again !" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requestPage.this, "Failed to Request, Please try again !" , Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }

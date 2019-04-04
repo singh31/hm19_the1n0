@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
@@ -41,9 +42,10 @@ public class homePage extends AppCompatActivity implements View.OnClickListener 
     private Button makeRequest;
 
     private RecyclerView postList;
-    postAdapter adapter;
-    List<homePagePost> pList;
-    //postList is variable of RecylerView Tyoe
+    //postAdapter adapter;
+    BloodReqAdapter adapter;
+    ArrayList<homePagePost> pList;
+    //postList is variable of RecylerView Type
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -105,7 +107,9 @@ public class homePage extends AppCompatActivity implements View.OnClickListener 
                         pList.add(p);
                     }
 
-                    adapter = new postAdapter( homePage.this, pList);
+                    adapter = new BloodReqAdapter(pList);
+
+                    //adapter = new postAdapter( homePage.this, pList);
                     postList.setAdapter(adapter);
                 }
 
@@ -116,6 +120,8 @@ public class homePage extends AppCompatActivity implements View.OnClickListener 
 
             }
         });
+
+
 
         navigationView = findViewById(R.id.navigation_view);
 
@@ -174,7 +180,7 @@ public class homePage extends AppCompatActivity implements View.OnClickListener 
         {
             case(R.id.makeRequest): {
                 //finish();
-                startActivity(new Intent(homePage.this, req.class));
+                startActivity(new Intent(homePage.this, requestPage.class));
             }
         }
 

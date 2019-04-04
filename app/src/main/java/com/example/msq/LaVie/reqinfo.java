@@ -6,7 +6,7 @@ public class reqinfo {
     public String bType;
     public long contact;
 
-    reqinfo()
+    reqinfo(String location1, int quantity1, String bloodGrp, String phNo1)
     {
 
     }
