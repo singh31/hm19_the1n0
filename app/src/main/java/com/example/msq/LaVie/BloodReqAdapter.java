@@ -72,6 +72,9 @@ public class BloodReqAdapter extends RecyclerView.Adapter<BloodReqAdapter.Reques
                     if(post.getContact() == tempPost.getContact()){
                         Snapshot.getRef().removeValue();
                         mlist.remove(position);
+                        ArrayList<homePagePost> temp = (ArrayList<homePagePost>) mlist.clone();
+                        mlist.clear();
+                        mlist = temp;
                         notifyDataSetChanged();
                     }
                 }

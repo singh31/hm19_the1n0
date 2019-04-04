@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:layout_gravity="center"
-                android:hint="Quantity in L"
+                android:hint="Quantity"
                 android:textColor="#fff"
                 android:inputType="textPersonName"
                 android:backgroundTint="#fff"
